@@ -4,7 +4,14 @@ const mongoose = require('mongoose'),
 
 const PlayerSchema = new mongoose.Schema(
   {
-    name: {
+    userId: {
+      type: Schema.Types.ObjectId,
+      ref: Config.mongo.schemas.userData
+    },
+    playerId: {
+      type: Schema.Types.String
+    },
+    playerLogo: {
       type: Schema.Types.String
     },
     basePrice: {
@@ -14,9 +21,8 @@ const PlayerSchema = new mongoose.Schema(
     leagueLevel: {
       type: Schema.Types.String
     },
-    isAvailable: {
-      type: Schema.Types.Boolean,
-      default: false
+    status: {
+      type: Schema.Types.String
     },
     previousTeams: {
       type: Schema.Types.Mixed
@@ -24,7 +30,7 @@ const PlayerSchema = new mongoose.Schema(
       // team id
       // team name
     },
-    captainCount: {
+    isCaptain: {
       type: Schema.Types.Number
     },
     highestAuctionPrice: {

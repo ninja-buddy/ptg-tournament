@@ -7,16 +7,44 @@ const TeamSchema = new mongoose.Schema(
     name: {
       type: Schema.Types.String
     },
-    membersCount: {
-      type: Schema.Types.Number,
-      default: 5
+    captain: {
+      type: Schema.Types.ObjectId,
+      ref: Config.mongo.schemas.playerData
     },
-    playersList: {
+    players: {
       type: Schema.Types.Mixed
       // []
       // id
       // name
       // price
+    },
+    tournament: {
+      type: Schema.Types.ObjectId,
+      ref: Config.mongo.schemas.tournamentData
+    },
+    winCount: {
+      type: Schema.Types.Number,
+      default: 0
+    },
+    lossCount: {
+      type: Schema.Types.Number,
+      default: 0
+    },
+    tieCount: {
+      type: Schema.Types.Number,
+      default: 0
+    },
+    killCount: {
+      type: Schema.Types.Number,
+      default: 0
+    },
+    deathCount: {
+      type: Schema.Types.Number,
+      default: 0
+    },
+    assistCount: {
+      type: Schema.Types.Number,
+      default: 0
     }
   },
   {

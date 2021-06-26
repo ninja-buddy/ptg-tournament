@@ -1,11 +1,13 @@
-const PlayerController = require('./PlayerController'),
+const UserController = require('./UserController'),
+      PlayerController = require('./PlayerController'),
+      TeamController = require('./TeamController'),
       MatchController = require('./MatchController'),
-      TournamentController = require('./TournamentController'),
-      AuctionController = require('./AuctionController');
+      TournamentController = require('./TournamentController');
 
 module.exports = {
+  UserController,
   PlayerController,
+  TeamController,
   MatchController,
-  TournamentController,
-  AuctionController
+  TournamentController
 };

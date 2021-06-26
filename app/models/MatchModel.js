@@ -46,12 +46,16 @@ const MatchSchema = new mongoose.Schema(
     result: {
       type: Schema.Types.String
     },
+    wonBy: {
+      type: Schema.Types.ObjectId,
+      ref: Config.mongo.schemas.teamData
+    },
     remarks: {
       type: Schema.Types.String
     },
-    auctionId: {
+    tournament: {
       type: Schema.Types.ObjectId,
-      ref: Config.mongo.schemas.auctionData
+      ref: Config.mongo.schemas.tournamentData
     }
   },
   {

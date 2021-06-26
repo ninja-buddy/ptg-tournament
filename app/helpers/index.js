@@ -1,7 +1,11 @@
 const Config = require('./Config'),
-      Constants = require('./Constants');
+      Constants = require('./Constants'),
+      Utils = require('./Utils'),
+      Responses = require('./Responses');
 
 module.exports = {
   Config,
-  Constants
+  Constants,
+  Utils,
+  Responses
 };

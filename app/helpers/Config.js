@@ -9,7 +9,8 @@ module.exports = {
       playerData: 'player_data',
       teamData: 'team_data',
       matchData: 'match_data',
-      auctionData: 'auction_data'
+      tournamentData: 'tournament_data',
+      rolesData: 'roles_data',
     }
   }
 };

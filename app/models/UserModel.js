@@ -1,6 +1,9 @@
 const mongoose = require('mongoose'),
       Schema = mongoose.Schema,
-      { Config } = require('../helpers');
+      {
+        Config,
+        Constants
+      } = require('../helpers');
 
 const UserSchema = new mongoose.Schema(
   {
@@ -8,14 +11,19 @@ const UserSchema = new mongoose.Schema(
       type: Schema.Types.String
     },
     role: {
-      type: Schema.Types.String
-      // ADMIN, MANAGER, PLAYER
+      type: Schema.Types.String,
+      default: Constants.roles.player
+      // ADMIN, MANAGER, PLAYER, CAPTAIN
     },
     username: {
       type: Schema.Types.String
     },
     password: {
       type: Schema.Types.String
+    },
+    userLogo: { // Base64 string
+      type: Schema.Types.String,
+      default: ''
     }
   },
   {
